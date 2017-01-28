@@ -1,0 +1,21 @@
+<div class="bg-extended-header">
+
+  
+<div class="row row-offcanvas row-offcanvas-left">
+        
+        <!-- sidebar -->
+        <div class="col-xs-6 col-sm-2 sidebar-offcanvas" id="sidebar" role="navigation">
+            <ul class="nav">
+              <li ng-class="{'highlighted':content.name === 'plm'}"><a href ng-click="selecttab('plm')">Part Number</a></li>
+              <li ng-class="{'highlighted':content.name === 'import'}"><a href ng-click="selecttab('import')">Import Export</a></li>
+              <li ng-class="{'highlighted':content.name === 'other'}"><a href ng-click="selecttab('other')">Others</a></li>
+            </ul>
+        </div>
+  	
+        <!-- main area -->
+        <div class="col-xs-12 col-sm-9" id="tabview">
+                     <div ng-include="content.url"></div>
+        </div><!-- /.col-xs-12 main -->
+    </div><!--/.row-->
+
+</div>

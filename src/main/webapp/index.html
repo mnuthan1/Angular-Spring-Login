@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html ng-app="angularSpring">
+<head lang="en">
+<meta charset="UTF-8" />
+
+<!-- inject:css -->
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" href="resources/styles/main.css">
+
+<!-- endinject -->
+<title></title>
+</head>
+<body>
+
+	<div ng-if="authenticated" ng-include="'partials/navbar.html'"></div>
+	<div>	
+    	<img id="spinner" ng-show="loading" ng-src="resources/img/loading.gif" >
+  	</div>
+	
+	<div class="container">
+		<div style="position: relative">
+			<div ng-view="" class="fade"></div>
+		</div>
+	</div>
+
+	<!-- inject:js -->
+	
+	<script	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-animate.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-resource.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-sanitize.js"></script>
+	<script src="https:////ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-animate.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.1.5/js/ripples.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.1.5/js/material.min.js"></script>
+	
+	
+	
+	<script src="resources/js/thirdparty/http-auth-interceptor.js"></script>
+	
+	
+	
+	<!-- App specific java scripts -->
+	
+	<script src="resources/js/app.js"></script>
+	<script src="resources/js/app.services.js"></script>
+	<script src="resources/js/app.controller.js"></script>
+	<script src="resources/js/app.directives.js"></script>
+	<!-- endinject -->
+
+</body>
+</html>
